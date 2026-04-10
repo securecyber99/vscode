@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameHub - Your Ultimate Gaming Platform</title>
+    <title>Game of Thrones - Kingdoms & Rulers</title>
     <style>
         * {
             margin: 0;
@@ -13,424 +13,290 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #e0e0e0;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            opacity: 0.8;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 6rem 20px;
+            background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+            border-bottom: 3px solid #d4af37;
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: slideInDown 0.8s ease-out;
+        header h1 {
+            font-size: 3em;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            animation: slideInUp 0.8s ease-out;
-        }
-
-        .cta-button {
-            background: white;
-            color: #667eea;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        header p {
+            font-size: 1.3em;
+            color: #a0a0a0;
+            font-style: italic;
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        .section-title {
-            font-size: 2.5rem;
+        .intro {
             text-align: center;
-            margin: 3rem 0 2rem;
-            color: #333;
+            margin-bottom: 50px;
+            font-size: 1.1em;
+            color: #c0c0c0;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
         }
 
-        .platforms {
+        .kingdoms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
         }
 
-        .platform-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .kingdom-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            padding: 25px;
             transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        .platform-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        .kingdom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(212, 175, 55, 0.3);
         }
 
-        .platform-icon {
-            height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
+        .kingdom-card h2 {
+            color: #d4af37;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
         }
 
-        .platform-info {
-            padding: 20px;
-        }
-
-        .platform-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #667eea;
-        }
-
-        .platform-info p {
-            color: #666;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .specs {
-            background: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            color: #555;
-            margin: 10px 0;
-        }
-
-        .features {
-            background: white;
-            padding: 3rem 20px;
-            margin: 3rem 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .feature-item {
+        .sigil {
+            font-size: 2.5em;
+            margin-bottom: 15px;
             text-align: center;
-            padding: 1.5rem;
         }
 
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        .info-section {
+            margin: 15px 0;
         }
 
-        .feature-item h4 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+        .info-label {
+            color: #d4af37;
+            font-weight: bold;
+            display: inline-block;
+            min-width: 100px;
         }
 
-        .feature-item p {
-            color: #666;
-            font-size: 0.95rem;
+        .ruler-name {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .house-words {
+            font-style: italic;
+            color: #a8a8a8;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #444;
         }
 
         footer {
-            background: #333;
-            color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        .footer-links {
-            margin: 1rem 0;
-        }
-
-        .footer-links a {
-            color: #667eea;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            padding: 20px;
+            color: #808080;
+            border-top: 2px solid #d4af37;
+            margin-top: 50px;
+            font-size: 0.9em;
         }
 
         @media (max-width: 768px) {
-            nav ul {
-                gap: 1rem;
+            header h1 {
+                font-size: 2em;
             }
 
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
+            .kingdoms-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <header>
-        <nav>
-            <div class="logo">🎮 GameHub</div>
-            <ul>
-                <li><a href="#platforms">Platforms</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>⚔️ Game of Thrones ⚔️</h1>
+        <p>The Seven Kingdoms & Their Rulers</p>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to GameHub</h1>
-        <p>Discover the Ultimate Gaming Experience Across All Platforms</p>
-        <button class="cta-button">Explore Now</button>
-    </section>
-
-    <!-- Main Content -->
     <div class="container">
-        <!-- Gaming Platforms Section -->
-        <section id="platforms">
-            <h2 class="section-title">Gaming Platforms</h2>
-            <div class="platforms">
-                <!-- PlayStation -->
-                <div class="platform-card">
-                    <div class="platform-icon">🎮</div>
-                    <div class="platform-info">
-                        <h3>PlayStation</h3>
-                        <p>Experience next-generation gaming with cutting-edge graphics and exclusive titles.</p>
-                        <div class="specs">
-                            <strong>Latest:</strong> PS5<br>
-                            <strong>Library:</strong> 1000+ Games<br>
-                            <strong>Online:</strong> PlayStation Plus
-                        </div>
-                    </div>
-                </div>
+        <div class="intro">
+            <p>The Seven Kingdoms of Westeros are ruled by different houses, each with their own sigils, histories, and claims to power. Below are the major kingdoms and their most notable rulers throughout the series.</p>
+        </div>
 
-                <!-- Xbox -->
-                <div class="platform-card">
-                    <div class="platform-icon">▶️</div>
-                    <div class="platform-info">
-                        <h3>Xbox</h3>
-                        <p>Play with the power of next-gen technology and access Game Pass all games.</p>
-                        <div class="specs">
-                            <strong>Latest:</strong> Xbox Series X|S<br>
-                            <strong>Library:</strong> 500+ Games<br>
-                            <strong>Service:</strong> Game Pass
-                        </div>
-                    </div>
+        <div class="kingdoms-grid">
+            <!-- The North -->
+            <a href="kingdom-north.html" style="text-decoration: none; color: inherit;">
+            <div class="kingdom-card">
+                <h2>The North</h2>
+                <div class="sigil">🐺</div>
+                <div class="info-section">
+                    <span class="info-label">Capital:</span> Winterfell
                 </div>
-
-                <!-- Nintendo -->
-                <div class="platform-card">
-                    <div class="platform-icon">🎯</div>
-                    <div class="platform-info">
-                        <h3>Nintendo</h3>
-                        <p>Innovative gaming with iconic franchises and unique gameplay experiences.</p>
-                        <div class="specs">
-                            <strong>Latest:</strong> Nintendo Switch<br>
-                            <strong>Library:</strong> 2000+ Games<br>
-                            <strong>Online:</strong> Nintendo Switch Online
-                        </div>
-                    </div>
+                <div class="info-section">
+                    <span class="info-label">Ruler:</span> <span class="ruler-name">House Stark</span>
                 </div>
-
-                <!-- PC Gaming -->
-                <div class="platform-card">
-                    <div class="platform-icon">💻</div>
-                    <div class="platform-info">
-                        <h3>PC Gaming</h3>
-                        <p>Unlimited possibilities with Steam, Epic Games, and more on powerful hardware.</p>
-                        <div class="specs">
-                            <strong>Stores:</strong> Steam, Epic, GOG<br>
-                            <strong>Library:</strong> 50,000+ Games<br>
-                            <strong>Performance:</strong> Customizable
-                        </div>
-                    </div>
+                <div class="info-section">
+                    <span class="info-label">Key Rulers:</span> Jon Snow, Sansa Stark, Ned Stark
                 </div>
-
-                <!-- Mobile Gaming -->
-                <div class="platform-card">
-                    <div class="platform-icon">📱</div>
-                    <div class="platform-info">
-                        <h3>Mobile Gaming</h3>
-                        <p>Play anytime, anywhere with thousands of games on iOS and Android.</p>
-                        <div class="specs">
-                            <strong>Platforms:</strong> iOS & Android<br>
-                            <strong>Library:</strong> 1M+ Apps<br>
-                            <strong>Type:</strong> Casual to Hardcore
-                        </div>
-                    </div>
-                </div>
-
-                <!-- VR Gaming -->
-                <div class="platform-card">
-                    <div class="platform-icon">🥽</div>
-                    <div class="platform-info">
-                        <h3>VR Gaming</h3>
-                        <p>Immerse yourself in virtual worlds with the latest VR technology.</p>
-                        <div class="specs">
-                            <strong>Devices:</strong> Meta Quest, VIVE<br>
-                            <strong>Library:</strong> 500+ VR Games<br>
-                            <strong>Experience:</strong> Full Immersion
-                        </div>
-                    </div>
-                </div>
+                <div class="house-words">"Winter is Coming"</div>
             </div>
-        </section>
+            </a>
 
-        <!-- Features Section -->
-        <section id="features" class="features">
-            <h2 class="section-title">Why Choose GameHub?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">⚡</div>
-                    <h4>High Performance</h4>
-                    <p>Experience smooth gameplay with optimized performance across all platforms.</p>
+            <!-- The Vale -->
+            <a href="kingdom-vale.html" style="text-decoration: none; color: inherit;">
+            <div class="kingdom-card">
+                <h2>The Vale of Arryn</h2>
+                <div class="sigil">🦅</div>
+                <div class="info-section">
+                    <span class="info-label">Capital:</span> The Eyrie
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🎯</div>
-                    <h4>Exclusive Titles</h4>
-                    <p>Access exclusive game releases and early access programs.</p>
+                <div class="info-section">
+                    <span class="info-label">Ruler:</span> <span class="ruler-name">House Arryn</span>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👥</div>
-                    <h4>Community</h4>
-                    <p>Connect with millions of gamers worldwide and join our thriving community.</p>
+                <div class="info-section">
+                    <span class="info-label">Key Rulers:</span> Jon Arryn, Robin Arryn
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <h4>Best Prices</h4>
-                    <p>Get the best deals on games, subscriptions, and gaming hardware.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔐</div>
-                    <h4>Secure & Safe</h4>
-                    <p>Your account is protected with advanced security features.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🌍</div>
-                    <h4>Global Support</h4>
-                    <p>24/7 customer support available in multiple languages.</p>
-                </div>
+                <div class="house-words">"As High as Honor"</div>
             </div>
-        </section>
+            </a>
+
+            <!-- The Riverlands -->
+            <a href="kingdom-riverlands.html" style="text-decoration: none; color: inherit;">
+            <div class="kingdom-card">
+                <h2>The Riverlands</h2>
+                <div class="sigil">🐟</div>
+                <div class="info-section">
+                    <span class="info-label">Capital:</span> Riverrun
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Ruler:</span> <span class="ruler-name">House Tully</span>
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Key Rulers:</span> Hoster Tully, Edmure Tully
+                </div>
+                <div class="house-words">"Family, Duty, Honor"</div>
+            </div>
+            </a>
+
+            <!-- The Westerlands -->
+            <a href="kingdom-westerlands.html" style="text-decoration: none; color: inherit;">
+            <div class="kingdom-card">
+                <h2>The Westerlands</h2>
+                <div class="sigil">🦁</div>
+                <div class="info-section">
+                    <span class="info-label">Capital:</span> Casterly Rock
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Ruler:</span> <span class="ruler-name">House Lannister</span>
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Key Rulers:</span> Tywin Lannister, Cersei Lannister
+                </div>
+                <div class="house-words">"Hear Me Roar"</div>
+            </div>
+            </a>
+
+            <!-- The Reach -->
+            <a href="kingdom-reach.html" style="text-decoration: none; color: inherit;">
+            <div class="kingdom-card">
+                <h2>The Reach</h2>
+                <div class="sigil">🌹</div>
+                <div class="info-section">
+                    <span class="info-label">Capital:</span> Highgarden
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Ruler:</span> <span class="ruler-name">House Tyrell</span>
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Key Rulers:</span> Mace Tyrell, Olenna Tyrell
+                </div>
+                <div class="house-words">"We Are the Fury"</div>
+            </div>
+            </a>
+
+            <!-- The Stormlands -->
+            <a href="kingdom-stormlands.html" style="text-decoration: none; color: inherit;">
+            <div class="kingdom-card">
+                <h2>The Stormlands</h2>
+                <div class="sigil">⚡</div>
+                <div class="info-section">
+                    <span class="info-label">Capital:</span> Storm's End
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Ruler:</span> <span class="ruler-name">House Baratheon</span>
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Key Rulers:</span> Robert Baratheon, Stannis Baratheon
+                </div>
+                <div class="house-words">"Ours is the Fury"</div>
+            </div>
+            </a>
+
+            <!-- The Crownlands -->
+            <a href="kingdom-crownlands.html" style="text-decoration: none; color: inherit;">
+            <div class="kingdom-card">
+                <h2>The Crownlands</h2>
+                <div class="sigil">👑</div>
+                <div class="info-section">
+                    <span class="info-label">Capital:</span> King's Landing
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Ruler:</span> <span class="ruler-name">House Targaryen/Baratheon</span>
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Key Rulers:</span> Daenerys Targaryen, Aerys II Targaryen
+                </div>
+                <div class="house-words">"Fire and Blood"</div>
+            </div>
+            </a>
+
+            <!-- Dorne -->
+            <a href="kingdom-dorne.html" style="text-decoration: none; color: inherit;">
+            <div class="kingdom-card">
+                <h2>Dorne</h2>
+                <div class="sigil">🐉</div>
+                <div class="info-section">
+                    <span class="info-label">Capital:</span> Sunspear
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Ruler:</span> <span class="ruler-name">House Martell</span>
+                </div>
+                <div class="info-section">
+                    <span class="info-label">Key Rulers:</span> Doran Martell, Oberyn Martell
+                </div>
+                <div class="house-words">"Unbowed, Unbent, Unbroken"</div>
+            </div>
+            </a>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <h3>GameHub - Your Gaming Destination</h3>
-        <p>&copy; 2026 GameHub. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Support</a>
-            <a href="#">Blog</a>
-        </div>
-        <p>Contact us: support@gamehub.com | Phone: 1-800-GAMEHUB</p>
+    <footer>
+        <p>&copy; 2026 Game of Thrones Kingdoms. "The Iron Throne awaits..."</p>
     </footer>
 </body>
 </html>

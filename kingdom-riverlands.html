@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Riverlands - Game of Thrones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+            border-bottom: 3px solid #d4af37;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn {
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ffd700;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .detail-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .detail-card h2 {
+            color: #d4af37;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
+        }
+
+        .sigil {
+            font-size: 4em;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #d4af37;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #c0c0c0;
+        }
+
+        .house-words {
+            font-style: italic;
+            color: #ffd700;
+            font-size: 1.3em;
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 5px;
+        }
+
+        .description {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #c0c0c0;
+            margin: 20px 0;
+        }
+
+        .rulers-section {
+            margin-top: 20px;
+        }
+
+        .ruler {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 3px solid #ffd700;
+        }
+
+        .ruler-name {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .ruler-role {
+            color: #a0a0a0;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #808080;
+            border-top: 2px solid #d4af37;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="back-btn" onclick="window.location.href='website.html'">← Back</button>
+        <h1>🐟 The Riverlands 🐟</h1>
+    </header>
+
+    <div class="container">
+        <div class="detail-card">
+            <div class="sigil">🐟</div>
+            
+            <div class="house-words">"Family, Duty, Honor"</div>
+
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Capital</h3>
+                    <p>Riverrun</p>
+                </div>
+                <div class="info-box">
+                    <h3>Ruling House</h3>
+                    <p>House Tully</p>
+                </div>
+                <div class="info-box">
+                    <h3>Sigil</h3>
+                    <p>A silver trout on a blue and red field</p>
+                </div>
+                <div class="info-box">
+                    <h3>Location</h3>
+                    <p>Central Westeros</p>
+                </div>
+            </div>
+
+            <h2>About The Riverlands</h2>
+            <div class="description">
+                The Riverlands is a fertile region in central Westeros, wealthy and prosperous in times of peace. It is ruled by House Tully from their seat at Riverrun, a castle built at the confluence of three rivers. The Riverlands is known for its agricultural abundance and strategic position. House Tully values family bonds and loyalty above all else. However, as a central location, the Riverlands frequently became a battleground during the wars.
+            </div>
+
+            <h2>Geography & Culture</h2>
+            <div class="description">
+                The Riverlands are defined by numerous rivers that provide both fertility and transportation. The region is less heavily forested than others and more open, making it easier to traverse but harder to defend. Riverrun is a formidable fortress surrounded by water. The people of the Riverlands are traders and farmers, and they value the old ways of chivalry and honor. The region follows the Faith of the Seven.
+            </div>
+
+            <h2>Key Rulers</h2>
+            <div class="rulers-section">
+                <div class="ruler">
+                    <div class="ruler-name">Hoster Tully (The Late Lord)</div>
+                    <div class="ruler-role">Patriarch who allied the Riverlands with the Starks</div>
+                </div>
+                <div class="ruler">
+                    <div class="ruler-name">Edmure Tully</div>
+                    <div class="ruler-role">Lord of Riverrun, known for his military blunders during the War of Five Kings</div>
+                </div>
+                <div class="ruler">
+                    <div class="ruler-name">Catelyn Stark (née Tully)</div>
+                    <div class="ruler-role">Former lady of the Riverlands, drove the war efforts in the region</div>
+                </div>
+                <div class="ruler">
+                    <div class="ruler-name">Theon Greyjoy</div>
+                    <div class="ruler-role">Briefly held Riverrun during the wars</div>
+                </div>
+            </div>
+
+            <h2>Notable Events</h2>
+            <div class="description">
+                The Riverlands suffered greatly during the War of the Five Kings, serving as a major battlefield. Robb Stark's armies marched through the region, and numerous battles were fought on Tully lands. The Red Wedding, one of the most shocking events in the series, took place in the Riverlands. The region was eventually conquered and fell under various rulers before achieving stability.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Game of Thrones Kingdoms. "Family, Duty, Honor."</p>
+    </footer>
+</body>
+</html>

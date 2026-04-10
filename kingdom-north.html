@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The North - Game of Thrones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+            border-bottom: 3px solid #d4af37;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn {
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ffd700;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .detail-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .detail-card h2 {
+            color: #d4af37;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
+        }
+
+        .sigil {
+            font-size: 4em;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #d4af37;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #c0c0c0;
+        }
+
+        .house-words {
+            font-style: italic;
+            color: #ffd700;
+            font-size: 1.3em;
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 5px;
+        }
+
+        .description {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #c0c0c0;
+            margin: 20px 0;
+        }
+
+        .rulers-section {
+            margin-top: 20px;
+        }
+
+        .ruler {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 3px solid #ffd700;
+        }
+
+        .ruler-name {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .ruler-role {
+            color: #a0a0a0;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #808080;
+            border-top: 2px solid #d4af37;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="back-btn" onclick="window.location.href='website.html'">← Back</button>
+        <h1>⚔️ The North ⚔️</h1>
+    </header>
+
+    <div class="container">
+        <div class="detail-card">
+            <div class="sigil">🐺</div>
+            
+            <div class="house-words">"Winter is Coming"</div>
+
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Capital</h3>
+                    <p>Winterfell</p>
+                </div>
+                <div class="info-box">
+                    <h3>Ruling House</h3>
+                    <p>House Stark</p>
+                </div>
+                <div class="info-box">
+                    <h3>Sigil</h3>
+                    <p>A gray direwolf on white field</p>
+                </div>
+                <div class="info-box">
+                    <h3>Location</h3>
+                    <p>Northern Westeros</p>
+                </div>
+            </div>
+
+            <h2>About The North</h2>
+            <div class="description">
+                The North is the largest kingdom in Westeros by area, comprising roughly one-third of the continent. It is a cold, harsh land known for its winters that can last for years. The North is ruled by House Stark from their seat at Winterfell. The region is known for its strong sense of honor, loyalty, and the practice of keeping one's word. The Starks are renowned for their Northern discipline and their connection to the old gods of the forest.
+            </div>
+
+            <h2>Geography & Culture</h2>
+            <div class="description">
+                The North encompasses vast forests, mountains, and the Wall in the far north, which separates the Six Kingdoms from the lands beyond. The climate is perpetually cold, and the inhabitants are hardy and resilient. The North values honor, duty, and the old ways. The people of the North practice the religion of the Old Gods rather than the Faith of the Seven.
+            </div>
+
+            <h2>Key Rulers</h2>
+            <div class="rulers-section">
+                <div class="ruler">
+                    <div class="ruler-name">Ned Stark (The Lord of Winterfell)</div>
+                    <div class="ruler-role">Honorable patriarch, killed during the War of the Five Kings</div>
+                </div>
+                <div class="ruler">
+                    <div class="ruler-name">Jon Snow</div>
+                    <div class="ruler-role">Bastard of Ned Stark, Lord Commander of the Night's Watch, later King in the North</div>
+                </div>
+                <div class="ruler">
+                    <div class="ruler-name">Sansa Stark</div>
+                    <div class="ruler-role">Eldest daughter, survivor of political intrigue, Queen in the North</div>
+                </div>
+                <div class="ruler">
+                    <div class="ruler-name">Catelyn Stark</div>
+                    <div class="ruler-role">Wife of Ned Stark, mother of the Stark children</div>
+                </div>
+                <div class="ruler">
+                    <div class="ruler-name">Arya Stark</div>
+                    <div class="ruler-role">Young warrior, trained as an assassin, explorer of the world</div>
+                </div>
+            </div>
+
+            <h2>Notable Events</h2>
+            <div class="description">
+                The North saw significant change during the series. Winterfell was captured by Theon Greyjoy but reclaimed by the Starks. The North was the base for Robb Stark's War of the Five Kings. Later, it fell under the control of the Boltons before Jon Snow retook it. The North remained strong and proud throughout the conflicts, ultimately achieving independence or self-governance by the end of the series.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Game of Thrones Kingdoms. "The North Remembers."</p>
+    </footer>
+</body>
+</html>
